@@ -60,9 +60,8 @@ ENV PGID 1000
 ENV PUID 1000
 
 # Expose necessary ports
-EXPOSE 9876/udp
-EXPOSE 9877/udp
-EXPOSE 9878/tcp
+EXPOSE 27015/udp
+EXPOSE 27016/udp
 
 # Setup environment variables for configuring the server
 ENV V_RISING_SERVER_PERSISTENT_DATA_PATH     "/app/vrising"
@@ -71,18 +70,18 @@ ENV V_RISING_SERVER_START_MODE               "0"
 ENV V_RISING_SERVER_UPDATE_MODE              "0"
 
 # Setup environment variables for customizing the server
-ENV V_RISING_SERVER_NAME                     "V Rising Docker Server"
-ENV V_RISING_SERVER_DESCRIPTION              "V Rising server running inside a Docker container."
-ENV V_RISING_SERVER_BIND_IP                  "127.0.0.1"
-ENV V_RISING_SERVER_GAME_PORT                9876
-ENV V_RISING_SERVER_QUERY_PORT               9877
-ENV V_RISING_SERVER_RCON_PORT                9878
-ENV V_RISING_SERVER_RCON_ENABLED             true
-ENV V_RISING_SERVER_RCON_PASSWORD            "s3cr3t_rc0n_p455w0rd"
-ENV V_RISING_SERVER_MAX_CONNECTED_USERS      40
-ENV V_RISING_SERVER_MAX_CONNECTED_ADMINS     4
+ENV V_RISING_SERVER_NAME                     "test228"
+ENV V_RISING_SERVER_DESCRIPTION              ""
+# ENV V_RISING_SERVER_BIND_IP                  "127.0.0.1"
+ENV V_RISING_SERVER_GAME_PORT                27015
+ENV V_RISING_SERVER_QUERY_PORT               27016
+# ENV V_RISING_SERVER_RCON_PORT                9878
+ENV V_RISING_SERVER_RCON_ENABLED             false
+# ENV V_RISING_SERVER_RCON_PASSWORD            "s3cr3t_rc0n_p455w0rd"
+ENV V_RISING_SERVER_MAX_CONNECTED_USERS      2
+ENV V_RISING_SERVER_MAX_CONNECTED_ADMINS     1
 ENV V_RISING_SERVER_SAVE_NAME                "docker"
-ENV V_RISING_SERVER_PASSWORD                 ""
+ENV V_RISING_SERVER_PASSWORD                 "1234"
 ENV V_RISING_SERVER_LIST_ON_MNASTER_SERVER   true
 ENV V_RISING_SERVER_AUTO_SAVE_COUNT          50
 ENV V_RISING_SERVER_AUTO_SAVE_INTERVAL       600
